@@ -1,5 +1,6 @@
 
     <view>
+        <i class="iconfont"></i>
     </view>
     
   <view class="counter {{$counter$style}}">

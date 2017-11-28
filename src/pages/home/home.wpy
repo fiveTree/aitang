@@ -1,6 +1,9 @@
 <script>
 import wepy from 'wepy';
 import Counter from 'counter';
+import {
+  getLoginCode
+} from '../../service/getData'
 
 export default class Home extends wepy.page {
     config = {};
@@ -10,13 +13,18 @@ export default class Home extends wepy.page {
     methods = {};
 
     events = {};
-    onLoad() {};
+    onLoad() {
+        getLoginCode().then(code=>{
+            console.log(code)
+        })
+    };
     // Other properties
 }
 </script>
 
 <template lang="wxml">
     <view>
+        <i class="iconfont">&#xe802;</i>
     </view>
     <counter></counter>
 </template>
